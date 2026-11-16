@@ -1,0 +1,121 @@
+
+# ==========================================
+# RetailIQ — Git Ignore
+# ==========================================
+
+# ------------------------------------------
+# 1. Environment variables and secrets
+# ------------------------------------------
+.env
+.env.*
+!.env.example
+
+# Explicit Snowflake credential locations
+/.env
+/src/retailiq/.env
+
+# Other private credentials
+*.pem
+*.key
+credentials.json
+secrets.toml
+.streamlit/secrets.toml
+
+# ------------------------------------------
+# 2. Python virtual environments
+# ------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+.conda/
+
+# ------------------------------------------
+# 3. Python cache and compiled files
+# ------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ------------------------------------------
+# 4. Python build and packaging
+# ------------------------------------------
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# ------------------------------------------
+# 5. Raw datasets
+# ------------------------------------------
+data/*
+!data/.gitkeep
+*.parquet
+
+# ------------------------------------------
+# 6. ML models and generated artifacts
+# ------------------------------------------
+artifacts/*
+!artifacts/.gitkeep
+
+*.joblib
+*.pkl
+*.pickle
+*.onnx
+
+# ------------------------------------------
+# 7. MLflow experiment tracking
+# ------------------------------------------
+mlruns/
+mlartifacts/
+mlflow.db
+mlflow.db-*
+*.db-journal
+*.db-wal
+*.db-shm
+
+# ------------------------------------------
+# 8. Local databases
+# ------------------------------------------
+*.sqlite
+*.sqlite3
+
+# ------------------------------------------
+# 9. Jupyter Notebook checkpoints
+# ------------------------------------------
+.ipynb_checkpoints/
+
+# ------------------------------------------
+# 10. Logs and temporary files
+# ------------------------------------------
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+.DS_Store
+
+# ------------------------------------------
+# 11. IDE and editor settings
+# ------------------------------------------
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ------------------------------------------
+# 12. OS-generated files
+# ------------------------------------------
+Thumbs.db
+Desktop.ini
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
